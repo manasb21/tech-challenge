@@ -1,0 +1,22 @@
+image:
+  name: hello-world
+  tag: latest
+  registry: adamgolab
+
+service:
+  port: 8000
+  targetPort: 8000
+
+deployment:
+  replicas: 1
+  depRegion: de
+
+ingress:
+  enabled: false
+  context_paths:
+    - name: de
+      path: /de
+    - name: es
+      path: /es
+    - name: ua
+      path: /ua
